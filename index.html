@@ -17,7 +17,6 @@
                 margin: 0 auto;
                 float: left;
                 clear: left;
-                margin-top: 50px;
             }
 
             .crossbox {
@@ -28,7 +27,6 @@
 
             .bbox {
                 float: left;
-                margin-left: 50px;
             }
 
             .abox {
@@ -37,7 +35,6 @@
 
             .cbox {
                 float: left;
-                margin-left: 50px;
             }
         </style>
     </head>
@@ -67,7 +64,7 @@
         var cbox = document.getElementById("cbox1")
         var crossbox = document.getElementById("crossbox1")
         var boxsize = document.documentElement.clientHeight/30;
-        boxsize = Math.min(boxsize,document.documentElement.clientWidth/30);
+        boxsize = Math.min(boxsize,document.documentElement.clientWidth/35);
         window.onload = create_matmul(abox,bbox,cbox, crossbox,16,16,4, boxsize, 4, boxsize/8);
     </script>
 </html>

@@ -143,6 +143,16 @@ function create_matmul(abox, bbox, cbox, crossbox, m, n, k, size, margin, border
     .highlight {
         border: ` + (2*border_width).toString() + `px solid #fece00;
     }
+
+    .lowerbox {
+        margin-top:` + (1.5*size).toString() + `px;
+    }
+    .bbox {
+        margin-left:` + (1.5*size).toString() + `px;
+    }
+    .cbox {
+        margin-left:` + (1.5*size).toString() +`px;
+    }
     `;
     document.head.appendChild(elbox_style);
 
