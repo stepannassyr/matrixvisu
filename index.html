@@ -67,6 +67,7 @@
         var cbox = document.getElementById("cbox1")
         var crossbox = document.getElementById("crossbox1")
         var boxsize = document.documentElement.clientHeight/30;
-        window.onload = create_matmul(abox,bbox,cbox, crossbox,16,16,4, boxsize, 4);
+        boxsize = Math.min(boxsize,document.documentElement.clientWidth/30);
+        window.onload = create_matmul(abox,bbox,cbox, crossbox,16,16,4, boxsize, 4, boxsize/8);
     </script>
 </html>

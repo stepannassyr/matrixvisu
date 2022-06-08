@@ -118,13 +118,13 @@ function create_matrix(container, m, n, size, margin, el_class) {
     }
 }
 
-function create_matmul(abox, bbox, cbox, crossbox, m, n, k, size, margin)
+function create_matmul(abox, bbox, cbox, crossbox, m, n, k, size, margin, border_width)
 {
     var elbox_style = document.createElement("style");
     elbox_style.innerHTML = `
     .elbox {
-        border : 2px solid black;
-        border-radius: 8px;
+        border : ` + border_width.toString() + `px solid black;
+        border-radius: ` + (2*border_width).toString() + `px;
         width: ` + size.toString() + `px;
         height: ` + size.toString() + `px;
         margin-left: ` + margin.toString() + `px;
@@ -141,7 +141,7 @@ function create_matmul(abox, bbox, cbox, crossbox, m, n, k, size, margin)
         background-color: #ebebeb;
     }
     .highlight {
-        border: 6px solid #fece00;
+        border: ` + (2*border_width).toString() + `px solid #fece00;
     }
     `;
     document.head.appendChild(elbox_style);
