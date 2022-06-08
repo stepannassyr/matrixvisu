@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Matrix Visualization</title>
+        <script charset="utf-8" src="matrix_functions.js"> 
+        </script>
+        <style type="text/css" media="screen">
+            .mainbox {
+            }
+            .upperbox {
+                float: left;
+            }
+
+            .lowerbox {
+                margin: 0 auto;
+                float: left;
+                clear: left;
+                margin-top: 50px;
+            }
+
+            .crossbox {
+                background-color:#ebebeb;
+                border-radius: 8px;
+                float: left;
+            }
+
+            .bbox {
+                float: left;
+                margin-left: 50px;
+            }
+
+            .abox {
+                float: left;
+            }
+
+            .cbox {
+                float: left;
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mainbox">
+        <div class="upperbox">
+            <div class="crossbox" id="crossbox1">
+                
+            </div>
+            <div class="bbox" id="bbox1">
+                
+            </div>
+        </div>
+        <div class="lowerbox">
+            <div class="abox" id="abox1">
+                 
+            </div>
+            <div class="cbox" id="cbox1">
+                
+            </div>
+        </div>
+        </div>
+    </body>
+    <script charset="utf-8"> 
+        var abox = document.getElementById("abox1")
+        var bbox = document.getElementById("bbox1")
+        var cbox = document.getElementById("cbox1")
+        var crossbox = document.getElementById("crossbox1")
+        var boxsize = document.documentElement.clientHeight/30;
+        window.onload = create_matmul(abox,bbox,cbox, crossbox,16,16,4, boxsize, 4);
+    </script>
+</html>
